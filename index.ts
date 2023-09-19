@@ -9,10 +9,7 @@ export default definePlugin({
     }],
 
     patches: [],
-    start() {
-
-    },
-    stop() {
-
-    },
+    // these may not be necessary
+    start() {},
+    stop() {},
 });
