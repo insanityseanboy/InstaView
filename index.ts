@@ -7,7 +7,7 @@ async function doTheThing(this: Component<Props>)
         const { embed } = this.props;
         if (!embed || embed.provider?.name !== "Instagram" || embed.video?.url) return;
 
-        // something like "get the video source from instagram url", and put it in the embed modal
+        // something like "get the video source from instagram url, and put it in the embed modal"
         // I don't know how to do this lol
 
         //this.forceUpdate(); // not sure if necessary, we'll find out
@@ -23,7 +23,7 @@ export default definePlugin
     authors: [{name: ["Wiiiiam"],id: 0n},{name: ["Sean"],id: 0n}],
 
     patches: 
-    [{
+    [doTheThing,{
         find: "this.renderInlineMediaEmbed",
         replacement: 
             {
